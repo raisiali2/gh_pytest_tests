@@ -1,0 +1,12 @@
+# by default pytest run the test in sequential order, 
+# in real scenario a test suite will have a number of test files each file will have a bunch of tests.
+# this will lead to a large execution time.
+# to over come this, pytest provides us with an option to run tests in parallel.
+
+# for this need to first install the pytest-xdist plugin.
+# run the test: pytest -n <num> run the tests by using multiple workers, like pytest -n 3 here is 3
+
+# we use test_multiplication.py and generate the xml by running
+
+
+# pytest test_multiplication.py -v --junitxml="result.xml"
