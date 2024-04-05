@@ -1,13 +1,11 @@
 import pytest
 
-@pytest.fixture
-def input_value():
-    input = 39
-    return input
-# above is fixture function named input_value, which supplies the input to the tests
-# to access finxture function, the tests have to mention the fixture name as input parameter.
-# pytest while the test is getting executed, will see the fixture name as input parameter.
-# it then executes the fixture function and the returned value is stored to the input parameter, which can be used by the test
+
+it = pytest.mark.it
+describe = pytest.mark.describe
+parametrize = pytest.mark.parrametrize
+skip = pytest.mark.skip
+
 
 def test_divisible_by_3(input_value):
     assert input_value % 3 == 0
